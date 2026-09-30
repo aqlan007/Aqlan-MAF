@@ -1,0 +1,10 @@
+{
+  "name": "Remix Remix Remix Remix KasirKu POS - Point of Sale Modern \u0026 Offline-First",
+  "description": "Aplikasi Kasir / Point of Sale modern, profesional, dan offline-first dengan manajemen stok, perhitungan HPP aktual, printer thermal Bluetooth, dan laporan keuangan komprehensif.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

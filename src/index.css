@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print styles for thermal paper (58mm and 80mm) and financial reports */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #thermal-receipt-printable,
+  #thermal-receipt-printable *,
+  #report-printable-area,
+  #report-printable-area * {
+    visibility: visible;
+  }
+
+  #thermal-receipt-printable,
+  #report-printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 2mm 3mm;
+    background: white;
+    color: black !important;
+    line-height: 1.2;
+    width: 100%;
+    max-width: 80mm;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  @page {
+    size: auto;
+    margin: 0mm;
+  }
+}
